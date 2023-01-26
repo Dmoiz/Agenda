@@ -7,18 +7,34 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2F74775E29708D2000CBC50A /* NetworkHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F74775D29708D2000CBC50A /* NetworkHelper.swift */; };
+		2F7477602971E34900CBC50A /* RegisterExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F74775F2971E34900CBC50A /* RegisterExtension.swift */; };
+		2F74776629760A4500CBC50A /* LoginExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F74776529760A4500CBC50A /* LoginExtensions.swift */; };
+		2F74776829771A4E00CBC50A /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F74776729771A4E00CBC50A /* HomeView.swift */; };
+		2F8F3DD9297B1834004E6700 /* Components.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F8F3DD8297B1834004E6700 /* Components.swift */; };
+		2F8F3DDB297B1CC7004E6700 /* CreateEventView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F8F3DDA297B1CC7004E6700 /* CreateEventView.swift */; };
+		2F8F3DDD2983039F004E6700 /* LoginView-ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F8F3DDC2983039F004E6700 /* LoginView-ViewModel.swift */; };
 		2FA4BD66296C9F7700626227 /* AgendaApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FA4BD65296C9F7700626227 /* AgendaApp.swift */; };
-		2FA4BD68296C9F7700626227 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FA4BD67296C9F7700626227 /* ContentView.swift */; };
+		2FA4BD68296C9F7700626227 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FA4BD67296C9F7700626227 /* LoginView.swift */; };
 		2FA4BD6A296C9F7900626227 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2FA4BD69296C9F7900626227 /* Assets.xcassets */; };
 		2FA4BD6D296C9F7900626227 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2FA4BD6C296C9F7900626227 /* Preview Assets.xcassets */; };
+		2FA4BD74296DF39E00626227 /* RegisterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FA4BD73296DF39E00626227 /* RegisterView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		2F74775D29708D2000CBC50A /* NetworkHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkHelper.swift; sourceTree = "<group>"; };
+		2F74775F2971E34900CBC50A /* RegisterExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterExtension.swift; sourceTree = "<group>"; };
+		2F74776529760A4500CBC50A /* LoginExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginExtensions.swift; sourceTree = "<group>"; };
+		2F74776729771A4E00CBC50A /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		2F8F3DD8297B1834004E6700 /* Components.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Components.swift; sourceTree = "<group>"; };
+		2F8F3DDA297B1CC7004E6700 /* CreateEventView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateEventView.swift; sourceTree = "<group>"; };
+		2F8F3DDC2983039F004E6700 /* LoginView-ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "LoginView-ViewModel.swift"; sourceTree = "<group>"; };
 		2FA4BD62296C9F7700626227 /* Agenda.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Agenda.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2FA4BD65296C9F7700626227 /* AgendaApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AgendaApp.swift; sourceTree = "<group>"; };
-		2FA4BD67296C9F7700626227 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		2FA4BD67296C9F7700626227 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		2FA4BD69296C9F7900626227 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2FA4BD6C296C9F7900626227 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		2FA4BD73296DF39E00626227 /* RegisterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -32,6 +48,53 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2F7477612975D03F00CBC50A /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				2F74775F2971E34900CBC50A /* RegisterExtension.swift */,
+				2F74776529760A4500CBC50A /* LoginExtensions.swift */,
+				2F8F3DD8297B1834004E6700 /* Components.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		2F7477632975D18000CBC50A /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				2FA4BD73296DF39E00626227 /* RegisterView.swift */,
+				2F74776729771A4E00CBC50A /* HomeView.swift */,
+				2F8F3DDA297B1CC7004E6700 /* CreateEventView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		2F7477642975D1BD00CBC50A /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				2F74775D29708D2000CBC50A /* NetworkHelper.swift */,
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
+		2F8F3DDE298303F4004E6700 /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				2FA4BD67296C9F7700626227 /* LoginView.swift */,
+				2F8F3DDC2983039F004E6700 /* LoginView-ViewModel.swift */,
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
+		2F8F3DDF29830445004E6700 /* Presentation */ = {
+			isa = PBXGroup;
+			children = (
+				2F7477612975D03F00CBC50A /* Extensions */,
+				2F7477632975D18000CBC50A /* Views */,
+				2F8F3DDE298303F4004E6700 /* Login */,
+			);
+			path = Presentation;
+			sourceTree = "<group>";
+		};
 		2FA4BD59296C9F7700626227 = {
 			isa = PBXGroup;
 			children = (
@@ -51,9 +114,10 @@
 		2FA4BD64296C9F7700626227 /* Agenda */ = {
 			isa = PBXGroup;
 			children = (
-				2FA4BD65296C9F7700626227 /* AgendaApp.swift */,
-				2FA4BD67296C9F7700626227 /* ContentView.swift */,
+				2F8F3DDF29830445004E6700 /* Presentation */,
 				2FA4BD69296C9F7900626227 /* Assets.xcassets */,
+				2FA4BD65296C9F7700626227 /* AgendaApp.swift */,
+				2F7477642975D1BD00CBC50A /* Data */,
 				2FA4BD6B296C9F7900626227 /* Preview Content */,
 			);
 			path = Agenda;
@@ -137,7 +201,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2FA4BD68296C9F7700626227 /* ContentView.swift in Sources */,
+				2F8F3DDD2983039F004E6700 /* LoginView-ViewModel.swift in Sources */,
+				2F74775E29708D2000CBC50A /* NetworkHelper.swift in Sources */,
+				2F74776629760A4500CBC50A /* LoginExtensions.swift in Sources */,
+				2FA4BD74296DF39E00626227 /* RegisterView.swift in Sources */,
+				2F8F3DD9297B1834004E6700 /* Components.swift in Sources */,
+				2F7477602971E34900CBC50A /* RegisterExtension.swift in Sources */,
+				2F74776829771A4E00CBC50A /* HomeView.swift in Sources */,
+				2F8F3DDB297B1CC7004E6700 /* CreateEventView.swift in Sources */,
+				2FA4BD68296C9F7700626227 /* LoginView.swift in Sources */,
 				2FA4BD66296C9F7700626227 /* AgendaApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -274,6 +346,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -302,6 +375,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
