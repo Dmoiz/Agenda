@@ -41,7 +41,7 @@ struct EventPresentationModel: Identifiable {
 
 struct HomeView: View {
     @State private var date: Date = Date()
-    @State private var events: [EventPresentationModel] = []
+    @State var events: [EventPresentationModel] = []
     @State private var shouldShowNewEvent: Bool = false
     var body: some View {
         ZStack {

@@ -9,16 +9,6 @@ import SwiftUI
 
 extension RegisterView {
     
-    var backgroundColor : some View {
-        Color.mint
-            .ignoresSafeArea()
-    }
-    var titleView : some View {
-        Text("Registro")
-            .foregroundColor(.indigo)
-            .font(.system(size: 50, weight: .bold))
-            .padding(.top, 50)
-    }
     func textFields() -> some View {
         VStack {
             TextField("Username", text: $email)
@@ -50,12 +40,21 @@ extension RegisterView {
                 .padding(.bottom, 100)
         }
     }
+    
     func btnRegister() -> some View {
         Button {
-            if password == repeatPassword {
-                register(user: email, pass: password)
+            if email.isEmpty || password.isEmpty || repeatPassword.isEmpty{
+                viewModel.title = "Hay campos vacíos"
+                viewModel.message = "Comprueba que has rellenado todos los campos correctamente"
+                viewModel.showAlert = true
+                print("Vacío")
+            } else if password != repeatPassword {
+                viewModel.title = "Las contraseñas no coinciden"
+                viewModel.message = "Comprueba que hayas puesto las contraseñas correctamente"
+                viewModel.showAlert = true
+                print("incorrectas")
             } else {
-                print("A")
+                viewModel.register(user: email, pass: password)
             }
         } label: {
             Text("Registrarse")

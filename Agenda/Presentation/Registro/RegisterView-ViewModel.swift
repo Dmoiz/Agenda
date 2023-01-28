@@ -1,18 +1,19 @@
 //
-//  LoginView-ViewModel.swift
+//  RegisterView-ViewModel.swift
 //  Agenda
 //
-//  Created by Diego Moreno on 26/1/23.
+//  Created by Diego Moreno on 27/1/23.
 //
 
 import Foundation
 
-extension LoginView {
-    class ViewModel : ObservableObject {
+extension RegisterView {
+    class ViewModel : ObservableObject{
         
         
         // MARK: - Properties
-        @Published var isLoged: Bool = false
+        
+        @Published var isRegistered: Bool = false
         @Published var showAlert: Bool = false
         @Published var title: String = ""
         @Published var message: String = ""
@@ -20,9 +21,9 @@ extension LoginView {
         
         // MARK: - Functions
         
-        func login(user: String, pass: String) {
-            let url = "https://superapi.netlify.app/api/login"
-            let dictionary: [String: Any] = [
+        func register(user: String, pass: String) {
+            let url = "https://superapi.netlify.app/api/register"
+            let dictionary = [
                 "user" : user,
                 "pass" : pass
             ]
@@ -33,10 +34,8 @@ extension LoginView {
                 } else if let data = data, let response = response as? HTTPURLResponse {
                     print(data.debugDescription)
                     if response.statusCode == 200 {
-                        print(response.statusCode)
                         self.onSuccess()
                     } else {
-                        print(response.statusCode)
                         self.onError(error: error?.localizedDescription ?? "")
                     }
                 }
@@ -44,14 +43,15 @@ extension LoginView {
         }
 
         func onSuccess() {
-            isLoged = true
+            isRegistered = true
         }
 
         func onError(error: String) {
             print(error)
-            title = "El usuario no existe"
-            message = "Asegúrate de haberlo escrito todo correctamente"
+            title = "Ha ocurrido un error al registrar al usuario"
+            message = "Comprueba que has escrito todo correctamente"
             showAlert = true
         }
     }
 }
+

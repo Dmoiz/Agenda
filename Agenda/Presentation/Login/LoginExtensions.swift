@@ -9,16 +9,6 @@ import SwiftUI
 
 extension LoginView {
     
-//    var backgroundColor : some View {
-//        Color.orange
-//            .ignoresSafeArea()
-//    }
-    var title : some View {
-        Text("Login")
-            .foregroundColor(.pink)
-            .font(.system(size: 50, weight: .bold))
-            .padding(.top, 50)
-    }
     func textFields() -> some View {
         VStack {
             TextField("Username", text: $email)
@@ -40,9 +30,16 @@ extension LoginView {
                 .padding(.horizontal)
         }
     }
+    
     func btnLogin() -> some View {
         Button {
-            login(user: email, pass: password)
+            if email.isEmpty || password.isEmpty {
+                viewModel.title = "Hay campos vacíos"
+                viewModel.message = "Comprueba que has rellenado todos los campos correctamente"
+                viewModel.showAlert = true
+            } else {
+                viewModel.login(user: email, pass: password)
+            }
         } label: {
             Text("Login")
                 .foregroundColor(.black)
@@ -55,7 +52,7 @@ extension LoginView {
         .padding(.horizontal, 50)
         .padding(.bottom, 30)
         .background(
-            NavigationLink(destination: HomeView(), isActive: $isLoged) {
+            NavigationLink(destination: HomeView(), isActive: $viewModel.isLoged) {
                 EmptyView()
             }
         )
