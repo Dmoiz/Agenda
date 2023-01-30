@@ -34,6 +34,7 @@ struct RegisterView: View {
                 btnRegister()
             }
         }
+        
         .alertCustom(title: viewModel.title, message: viewModel.message, show: $viewModel.showAlert)
         .onReceive(viewModel.$isRegistered) { newValue in
             dismiss.callAsFunction()

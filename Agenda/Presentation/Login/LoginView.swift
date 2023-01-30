@@ -34,7 +34,7 @@ struct LoginView: View {
                         RegisterView()
                     } label: {
                         Text("Go to Register")
-                            .foregroundColor(.blue)
+                            .foregroundColor(.indigo)
                             .font(.system(size: 20))
                     }
                 }

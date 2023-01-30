@@ -46,7 +46,7 @@ extension LoginView {
                 .font(.system(size: 30, weight: .heavy))
                 .frame(height: 60)
                 .frame(maxWidth: .infinity)
-                .background(Color.pink)
+                .background(Color.indigo)
         }
         .cornerRadius(40)
         .padding(.horizontal, 50)
